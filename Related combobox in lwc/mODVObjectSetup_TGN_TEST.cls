@@ -8,12 +8,14 @@ private class mODVObjectSetup_TGN_TEST{
         mODVObjectSetup.ObjectDetails();
         Test.stopTest();
     }
+    
     @isTest
     private static void getObjectName_TGN_TEST(){
         Test.startTest();
         mODVObjectSetup.getObjectName();
         Test.stopTest();
     }
+    
     @isTest
     private static void getObjectLookup_TGN_TEST(){
         Test.startTest();
@@ -21,6 +23,7 @@ private class mODVObjectSetup_TGN_TEST{
         mODVObjectSetup.getObjectLookup('');
         Test.stopTest();
     }
+    
     @isTest
     private static void disablerecord_TGN_TEST(){
         Test.startTest();
@@ -28,6 +31,7 @@ private class mODVObjectSetup_TGN_TEST{
         mODVObjectSetup.disablerecord(null);
         Test.stopTest();
     }
+    
     @isTest
     private static void putRecords_TGN_TEST(){
         Test.startTest();
@@ -35,6 +39,7 @@ private class mODVObjectSetup_TGN_TEST{
         mODVObjectSetup.putRecords('','');
         Test.stopTest();
     }
+    
     @isTest
     private static void mODVObjectSetup_TGN_TEST(){
         mODVObjectSetup obj = new mODVObjectSetup();
