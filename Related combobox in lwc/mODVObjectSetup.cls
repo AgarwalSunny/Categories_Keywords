@@ -19,6 +19,7 @@ public with sharing class mODVObjectSetup {
         List<Docify_Object_Mapping__c> objectMapping = [select Id,Object_API_Name__c,Field_API_Name__c from Docify_Object_Mapping__c];
         return objectMapping;
     }
+    
     //get all object api name for first combobox 
     @AuraEnabled(cacheable=true)
     public static List<String> getObjectName(){
@@ -31,6 +32,7 @@ public with sharing class mODVObjectSetup {
         }
         return sObjectList;
     }
+    
     // TO get related lookup field in MFile__c object according to selected object on 1st combobox 
     @AuraEnabled(cacheable=true)
     public static List<String> getObjectLookup(string selectedObject){
@@ -56,11 +58,13 @@ public with sharing class mODVObjectSetup {
         }
         return getObjectField;
     }
+    
     // TO delete the selected Docify_Object_Mapping__c records
     @AuraEnabled
     public static void disablerecord(List<Docify_Object_Mapping__c> oIds){
         delete oIds;
     }
+    
     // TO create 'Docify_Object_Mapping__c' custom setting record 
     @AuraEnabled
     public static Docify_Object_Mapping__c  putRecords(string objectApi , string fieldApi){
